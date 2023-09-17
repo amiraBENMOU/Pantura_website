@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+.main,.text-uppercase{
+    font-family: 'Roboto', sans-serif;
+    font-weight:bolder;
+}
+.bg-banner{
+    background-image: url('../image/background-contactUS.png');
+    background-size:100%;
+    background-color: rgba(255,255,255,0.6);
+    background-blend-mode: lighten;
+}
+.card{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    width:90%;
+    height:80%;
+    background-color: white;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:3%;
+    margin-bottom:5%;
+    border-radius:8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 3px 9px 3px;
+    /*box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;*/
+
+}
+.card p{
+    
+    font-family: 'Roboto', sans-serif;
+    font-size:3.7vw;
+    color:#99DB99;
+    font-weight:bolder;
+       
+}
+.text-uppercase{
+    background-color:#99DB99; 
+}
+.letter{
+    margin: auto;    
+    display: block;
+    text-align: center;
+}
+.phone{
+    margin: auto;    
+    display: block;
+    text-align:left;
+}
+.text,.phone-number{
+    text-align:right;
+}
+.icon-letter{
+    margin: auto;    
+    display: block;
+    
+}
+.text p{
+   
+    font-size:2.3vw;
+}
+.phone-number p{
+    font-size:1.3vw;
+    color:#4C564A;
+}
+.email-adresse p{
+    font-size:1.3vw;
+    color:#4C564A;
+}
+
+

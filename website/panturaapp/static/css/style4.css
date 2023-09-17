@@ -1,0 +1,17 @@
+.bg-banner{
+    background-image:none;
+}
+.rectengel .col-12{
+    background-color: green;
+}
+
+.h1{
+    font-family:'Roboto', sans-serif;
+    font-weight:bolder;
+    color:#4C564A;
+}
+#pink-buttom{
+    background-color:#FBA9D0;
+    color:white; 
+    font-weight:bolder; 
+}

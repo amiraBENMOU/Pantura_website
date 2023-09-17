@@ -1,0 +1,188 @@
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+
+
+<!DOCTYPE html>
+<html lang="en" class="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'js/script1.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/style1.css'%}"type="text/css">
+    
+    
+    <!-- jquery CDN-->
+   <script src="//code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+   
+</head>
+<body class="bg-banner">
+
+    
+      <header>
+          <div class="container" >
+            <nav class="navbar navbar-expand-xl navbar-light  "><!--fixed-top for the navbar-->
+                <a class="navbar-brand" href="{% url 'panturaapp:home' %}"> <img src="../../static/image/logo.png"style="height:40px;width:auto;margin-top:-28px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                      <a class="navigation nav-link   px-4 " href="{% url 'panturaapp:home' %}" ><p>{%trans "Accueil"%} </p></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="navigation nav-link  px-3 " href="{% url 'panturaapp:Produit' %}" ><p>{%trans "produit"%}</p></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="navigation nav-link px-3" href="#"  ><p>{%trans "a propos"%}</p></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="navigation nav-link px-3" href="{% url 'panturaapp:contactUs' %}"><p>{%trans "nous contacter"%}</p></a>
+                    </li>
+                    <script type="text/javascript">
+                    const currentLocation=location.href;
+                    const menuItem=document.querySelectorAll('navigation');
+                    const menuLength=menuItem.lenght
+                    for(let i=0;i<menuLength;i++){
+                      if(menuItem[i].href===currentLocation){
+                        menuItem[i].className="active"
+                      }
+                    }
+                    </script>
+                  <!-- {% if user.is_authenticated%}
+                    <li class="nav-item">
+                      hello,{{user.username}}
+                    {%endif%}
+                    </li>-->
+                    
+                  </ul>
+                  <!-- part two-->
+                  <ul class="navbar-nav ml-auto">
+                       <li class="nav-item "> 
+                           <a class="nav-link px-1" href="#"><img src="../../static/image/basket.png"style="height:40px;width:auto;margin-top:-28px" ></a>
+                        </li>
+                        <li class="nav-item">
+                         {% if user.is_authenticated%}
+                             <a class="nav-link px-1" href="{% url 'panturaapp:LogOut' %}"><button type="button" class="btn btn w-100"style="height:30px;margin-top:-28px; padding-top:2px ;width:120px;background-color:#99DB99;color:white; ">Se déconnecter</button></a>
+                          {% else %}  
+                              <a class="nav-link px-1" href="{% url 'panturaapp:LogIn' %}"><button type="button" class="btn btn w-100"style="height:30px;margin-top:-28px; padding-top:2px ;width:120px;background-color:#99DB99;color:white; ">Se connecter</button></a>
+                          {%endif%}  
+                        </li>                 
+                  </ul>
+                  
+                </div>
+              </nav>
+          </div>
+      </header>
+      <!-- adding the background-->
+      
+          
+              {% block content %}
+                
+            {% endblock %}
+       
+         <footer class="container py-5 mt-5 ">
+          <div class="row text-white">
+            <div class="col-12 col-md text-white ">
+          
+              <a href="{% url 'panturaapp:home' %}"><img  class="w-100"src= "../../static/image/logo White.png"  alt=""></a>
+              <p class="ml-5 "> Perfuno della natura</p>
+            </div>
+            <div class="col-6 col-md ">
+              <h5 class="pb-3">{%trans "Explorer"%}</h5>
+              <ul class="list-unstyled text-small ">
+                <li><a class="text-muted" href="{% url 'panturaapp:home' %}"><p>{%trans "Acceuil"%}</p></a></li>
+                <li><a class="text-muted" href="{% url 'panturaapp:Produit' %}"><p>{%trans "Produit"%}</p></a></li>
+                <li><a class="text-muted " href="#"> <p>{%trans "A Propot"%}</p></a></li>
+                <li><a class="text-muted " href="{% url 'panturaapp:contactUs' %}"><p>{%trans "Nous Contacter"%}</p></a></li>
+                
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5 class="pb-3">{%trans "Suivez nous"%}</h5>
+              <ul class="list-unstyled text-small ">
+                <li><a class="text-muted " href="https://m.facebook.com/Pnatura-108996028059381/?fref=tag"><p>Facebook</p></a></li>
+                <li><a class="text-muted" href="https://www.instagram.com/pnatura.dz/?hl=fr"><p>Instgram</p></a></li>
+            </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h5 class="pb-3">{%trans "Nos Contact"%}</h5>
+              <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#"><p>pantura.dz@gmail.com</p></a></li>
+                <li><a class="text-muted" href="#"><p>0557 487 905</p></a></li>
+                
+              </ul>
+            </div>
+                 <!-- plant B
+            <div class="col-6 col-md invisible">
+              <ul class="list-unstyled hidden">
+              <li class="nav-item dropdown pb-3 ">
+                      <button class="btn btn-light w-75  h-25 by-none"  href="#fr" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color:#99DB99;font-weight:bold;font-size:1.5vw ; letter-spacing:1px ;"data-reload>Francais
+                          <img   class="img-fluid py-1 w-25 h-5 float-right"src="../static/image/language Arrow.png" >
+                      </button> 
+                      
+                     <div class="dropdown-menu w-75 " aria-labelledby="navbarDropdown" >
+                           <a class="dropdown-item  " href="#eng"style="color:#99DB99;font-weight:bold;font-size:1.5vw; letter-spacing:1px ;"data-reload>English</a>
+                          
+                     </div>
+              </li>
+            </ul>
+           </div> -->
+             
+         <div class="col-6 col-md ">
+            <ul class="list-unstyled hidden">
+               <li class="nav-item dropdown pb-3 "  >
+                  <a class="nav-link language w-75  h-25 by-none btn-light " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{ LANGUAGE_CODE }} <img  class="img-fluid py-1 w-25 h-5 float-right"src="../../static/image/language Arrow.png" >
+                   </a>
+                <ul class="dropdown-menu w-75 "  aria-labelledby="navbarDropdown">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    
+            
+                      {% for language in languages %}
+                         <li >
+                              <a class="dropdown-item  text-xl-center"href="/{{language.code}}/">
+                                {{ language.name_local}}
+                              </a>
+                         </li>
+                       {%endfor%} 
+                 <ul>              
+                                 
+              </li>
+                            <!-- with database -->
+           <!--<form class="invisible" action="{% url 'set_language' %}" method="post" >{% csrf_token %}
+            <input  name="next" type="hidden" value="{{request.get_full_path|slice:'3:'}}">
+            <select name="language" class=" w-75  h-25"style="color:#99DB99;font-weight:bold;font-size:1.5vw; letter-spacing:1px ;">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                        {{ language.name_local }} ({{ language.code }})
+                    </option>
+                {% endfor %}
+            </select>
+            <input type="submit" >
+        </form>-->
+       <div>
+      <ul>  
+   </div>      
+</footer> 
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+</body>
+</html>

@@ -1,0 +1,69 @@
+.bg-banner{
+    background-image: url('../image/background.png');
+    background-size:100%;
+}
+.page__titel p{
+    
+    color:#4C564A;
+    font-weight: bolder;
+   
+}
+#page__titel1{
+    font-size:7vw;
+}
+#page__titel2{
+    font-size:1.8vw;
+}
+#green-color{
+   color: #99DB99;
+}
+
+.btn-block{
+    width:240px;
+}
+#pink-button{
+    background-color:#FBA9D0;
+    color:white; 
+    font-weight:bolder; 
+}
+
+
+#pink-button:hover{
+    background-color:#99DB99;
+}
+
+.description p,.best__product p,.best__selling p{
+  font-size:3vw;
+  color:#99DB99;
+   font-family: 'Roboto', sans-serif;
+   font-weight:bolder;
+  
+}
+.carousel-caption{
+    margin-top: 200px; 
+    padding-bottom: 0;
+
+    
+}
+
+#paragraph-1{
+ 
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    font-weight:bolder;
+    font-size:1.6vw;
+    
+    
+}
+    
+#paragraph-2{
+    color:black;
+    font-size:1.4vw;
+    font-weight:normal;
+    
+   
+}
+
+
+
+

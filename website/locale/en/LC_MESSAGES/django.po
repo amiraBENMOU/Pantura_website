@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-05 20:54+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\panturaapp\tamplates\panturaapp\Contact_us.html:21
+#: .\panturaapp\tamplates\panturaapp\base.html:96
+msgid "Nous Contacter"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\Contact_us.html:41
+msgid "Nous Appeler"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\Contact_us.html:47
+msgid "Email"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\Contact_us.html:54
+msgid "Localisation"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\Contact_us.html:55
+msgid "Blida, Algerie"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\base.html:49
+msgid "Accueil"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\base.html:52
+msgid "produit"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\base.html:55
+msgid "a propos"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\base.html:58
+msgid "nous contacter"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\base.html:91
+msgid "Explorer"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\base.html:93
+msgid "Acceuil"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\base.html:94
+msgid "Produit"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\base.html:95
+msgid "A Propot"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\base.html:101
+msgid "Suivez nous"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\base.html:108
+msgid "Nos Contact"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\index.html:16
+msgid "-PLUS DE PLANT PLUS DE JOIE-"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\index.html:20
+msgid "EXPLORER NOS PRODUIT"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\index.html:28
+msgid "NOUVEAU PRODUITS"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\index.html:49
+#: .\panturaapp\tamplates\panturaapp\index.html:219
+msgid "Ajouter au panier"
+msgstr ""
+
+#: .\panturaapp\tamplates\panturaapp\index.html:201
+msgid "MEILLEUR VENTES"
+msgstr ""

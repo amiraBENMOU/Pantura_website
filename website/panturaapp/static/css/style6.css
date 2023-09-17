@@ -1,0 +1,59 @@
+.bg{
+    background-image: url('../image/Background-signIn.png');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+}
+.card {
+   border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.userForm{
+    list-style-type: none;
+}
+
+.login-right{
+    background-image: url('../image/Login right rotate.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.btn-outline-light{
+    border: 3px solid white;
+    font-size:2.5vw;
+   
+}
+.btn-outline-light:hover{
+    background: none;
+    color:white;
+    transform:scale(1.2,1.2);
+    overflow: hidden;
+}
+.btn-outline-light:active:focus{
+    background:none!important;
+    border:3px solid white!important;
+   color:white!important;
+    
+    
+}
+.signIn{
+    color:#99DB99;
+    font-weight:bolder;
+}
+.createUser p{
+    font-weight:bolder;  
+}
+
+.sabmit{
+    background-color:#99DB99;
+    color:white;
+}
+
+.h5{ 
+       font-weight:bolder;
+} 
+.errorlist{
+    list-style-type:none;
+    color:red;
+}

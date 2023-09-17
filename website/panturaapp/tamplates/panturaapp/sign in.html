@@ -1,0 +1,47 @@
+{% extends 'panturaapp/base.html' %}
+{% load i18n %}
+{%load static%}
+
+{% block content %}
+<script src="//code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/style6.css' %}"type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+  
+    
+      <div class="bg">
+         <div class="card mt-2 mx-auto  mb-5 col-sm-9  bg-white shadow-3-strong "style="border-radius: 15px;" > 
+         <div class="row">
+             
+             <div class="form mt-2 col-sm-7">
+                  <div class="sign-in">
+                     <p id="titel" class="mb-2 ml-md-3 signIn h3"> Inscrivez-vous</p>
+                      <img src="../static/image/lign_connecter_vous.png" alt="connecter-vous" class="w-100 px-3" style="margin-top:-30px">
+                  </div>
+                  <form action="" method="post">
+                       {% csrf_token %}
+                      <ul class="userForm">
+                          <li id="username" class="createUser ml-md-5 mt-md-2 h5"><p>Nom d'utilisateur :</p>{{ form.username }}</li>
+                          <li id="email" class="createUser ml-md-5 h5"><p>Email :</p>{{ form.email }}</li>
+                          <li id="password1" class="createUser ml-md-5 h5"><p >Mot De Passe :</p>{{ form.password1 }}</li>
+                          <li id="password2" class="createUser ml-md-5 h5"><p >Confirmer Le Mot De Passe :</p>{{ form.password2 }}</li>
+                      </ul>
+                        <input type="submit" value="S'inscrire"  class=" sabmit btn ml-md-5 mt-md-3 mb-md-4 w-25 " >           
+                                 <div class="errorlist">  {% for field in form %} {{field.errors}} {% endfor %}   </div>    
+                       
+                   </form>
+            </div>
+
+              <div class=" login-right text-white text-center pb-5 pt-5 col-sm-5  w-100 ">
+                               <a href="{% url 'panturaapp:home' %}"><img  class="w-50 mt-5 pt-5 " src= "../static/image/logo White.png"  alt=""></a>
+                                <p class="h4 mt-3"> -PLUS DE PLANTE PLUS DE JOIE-</p> 
+                               <a href="{% url 'panturaapp:LogIn' %}"> <button type="button" class="btn btn-outline-light w-75 mt-4  "style="border-radius:30px; ">connecter-vous</button></a>           
+              </div>     
+       </div>
+   </div> 
+            
+                  
+     
+ {% endblock %}

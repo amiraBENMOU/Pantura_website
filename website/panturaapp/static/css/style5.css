@@ -1,0 +1,50 @@
+.bg{
+    background-image: url('../image/Background-signIn.png');
+    background-size:100%;
+    
+}
+.login-left{
+    background-image: url('../image/login left.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+#titel{
+    color:#99DB99;
+    font-weight:bolder;
+}
+.h3,.btn-outline-light{
+    color:white; 
+    font-weight:bolder;
+    
+}
+
+.btn-outline-light{
+    border: 3px solid white;
+    font-size:2.5vw;
+   
+}
+.btn-outline-light:active:focus{
+    background: none!important;
+    border: 3px solid white!important;
+   color:white!important;
+    
+    
+}
+
+.col-md-7 p{
+    font-size:2.5vw;
+    font-weight:bolder;
+    color:#99DB99; 
+}
+input[type="email"],input[type="password"]{
+    box-shadow:none !important;
+}
+.card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.btn-outline-light:hover{
+    background: none;
+    color:white;
+    transform:scale(1.2,1.2);
+    overflow: hidden;
+}
